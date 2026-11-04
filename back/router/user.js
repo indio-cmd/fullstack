@@ -8,7 +8,7 @@ router.get('/buscar', authMiddleware, ControllerUser.Buscar )
 router.get('/buscarum', authMiddleware, ControllerUser.Buscarum )
 router.post('/criar', ControllerUser.Criar )
 router.put('/alterar', authMiddleware, ControllerUser.Alterar )
-router.deletar('/deletar',authMiddleware, ControllerUser.Deletar )
+router.delete('/deletar',authMiddleware, ControllerUser.Deletar )
 router.post('/login', ControllerUser.Login )
 
 export default router

@@ -14,7 +14,7 @@ class ControllerProdutos{
   
     async  Buscarum(req, res){
     try {
-        const id = req.session.id
+        const id = req.params.id
         const produto = await ServiceProdutos.Buscarum(id)
          
   
@@ -39,7 +39,7 @@ class ControllerProdutos{
   
    async   Alterar(req, res){
   try {
-        const id = req.session.id
+        const id = req.params.id
         const {nome, categoria, marca} = req.body
   
       await ServiceProdutos.Alterar(id, nome, categoria, marca)
@@ -52,7 +52,7 @@ class ControllerProdutos{
   
    async   Deletar(req, res){
   try {
-        const id = req.session.id
+        const id = req.params.id
          
         await ServiceProdutos.Deletar(id)
    

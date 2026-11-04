@@ -10,7 +10,8 @@ class ServiceProdutos{
    if(!id){
        throw new Error("Favor informar o ID")
    }
-   return RepositoryProdutos.Buscarum(id)
+   
+   return  RepositoryProdutos.Buscarum(id)
        }
    
       async  Criar(nome, categoria, marca){

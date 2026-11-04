@@ -6,7 +6,7 @@ import routerprodutos from './router/produtos.js'
 const app = express()
 
 app.use(express.json())
-app.use('api/v1/user', router)
+app.use('/api/v1/user', router)
 app.use('/api/v1/produtos', routerprodutos)
 
 database.db

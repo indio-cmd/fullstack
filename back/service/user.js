@@ -67,7 +67,7 @@ await Repository.Deletar(id)
             },
             SECRET,
             {
-                expiresIn:60
+                expiresIn:60*60
             }
         )
     }
