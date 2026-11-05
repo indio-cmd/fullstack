@@ -1,11 +1,13 @@
+
 import { useNavigate } from 'react-router-dom'
 import './style.css'
 import { useState } from 'react'
+import { loginUser } from '../../api/users'
 
 function Login() {
     const navigate = useNavigate()
-    const [email, setEmail] = useState('');
-    const [senha, setSenha] = useState('');
+    const [email, setEmail] = useState('')
+    const [senha, setSenha] = useState('')
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -18,7 +20,7 @@ function Login() {
     return (
         <>
             <div className='login-container'>
-                <form className="login- form">
+                <form className="login-form" onSubmit={handleSubmit}>
                     <h2>Login</h2>
                     <div className='input-group'>
                         <label htmlFor="email">Email</label>
@@ -42,19 +44,17 @@ function Login() {
                         />
                     </div>
 
-                    <p>Não possui conta? <spam className="signup" onClick={() => { }}> Cadastre-se</spam> </p>
+                    <p>Não possui conta? <span className="signup" onClick={() => { }}> Cadastre-se</span> </p>
 
                     <button className='button'
                         type='submit'
-                        onClick={handleSubmit}
                     > Entrar </button>
 
-                        <button className='button back-button'
-                        onClick={() => {}} > Voltar </button>
+                    <button className='button back-button'
+                        type='button'
+                        onClick={() => { }}> Voltar </button>
                 </form>
             </div>
-
-
         </>
     )
 }
